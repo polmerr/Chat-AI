@@ -1,0 +1,292 @@
+.page{
+        flex:1;
+        flex-grow: 1;
+        padding:        5%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        
+        height: 100%;
+        
+        
+}
+
+.title{
+        display: flex;
+        align-items: center;
+        gap:40px;
+        
+
+}
+.title h1{
+        font-size: 60px;
+        font-weight:300;
+        font-family: 'OrientalCatsLight';
+        letter-spacing: 2px;
+}
+.cat{
+        height: 150px;
+}
+
+.bottom{
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction:column ;
+}
+
+.suggestionsCard{
+        display: flex;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        justify-content: space-between;
+        gap:10px;
+}       
+.suggestion{
+        position: relative;
+        width: 190px;
+        height: 190px;
+        background-color: #f3f4f9;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 20px;
+        box-shadow: 2px 3px 7px rgba(0,0,0,0.2);
+        padding: 20px;
+        color: #636469;
+        line-height: 1.9em;
+        
+}
+.suggestion h1{
+        font-family: "Cute","Cat cafe";
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+}
+.suggest-icon{
+        font-size: 35px;
+        position: absolute;
+        bottom:15px;
+        right:15px;
+        margin-top: 10px;
+}
+
+.input-card{
+        margin: 0px 120px;
+        padding:15px 20px;
+        border-radius: 15px;
+        border: solid 1px rgba(0,0,0,0.2);
+        
+        
+}
+
+.input-box{
+        display: flex;
+}
+
+.input-box input{
+        flex: 1;
+        margin-right: 10px;
+        border: none;
+        outline: none;
+        font-family: 'Cute','Cat cafe';
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1px;
+}
+
+ .input-box .submit{
+        font-size: 30px;
+        
+}
+.input-box div{
+        display: flex;
+        align-items: center;
+        gap:5px;       
+        cursor: pointer;
+}
+
+.input-card.invalid {
+        border: 1px solid rgba(255,100,100);
+        
+}
+.input-card.invalid .input-box input, .input-card.invalid{
+        background-color: rgba(255,225,225);
+}
+
+.input-card.invalid .input-box input::placeholder{
+        color:rgba(255,00,0);
+}
+
+.home{
+        font-family: "Cat icons";
+        font-size: 35px;
+        position: absolute;
+        top:20px;
+        right:0;
+        cursor: pointer;
+}
+
+.page.display{
+        animation: slideInPage 1s ease-in forwards;
+        right:5%;
+}
+
+.page.no-display{
+        animation: slideOutPage 1s ease-in forwards;
+        right: 5%;
+        
+}
+
+
+
+.result-box{
+        overflow-y: scroll;
+        height: 400px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        text-align: left;
+        font-family: "Cute";
+        font-size: 20px;
+        font-weight: 100;
+        color:#131469;
+        letter-spacing: 3px;
+        line-height: 1.9rem;
+        padding: 2% 10%;
+        
+}
+
+
+
+.result-box::-webkit-scrollbar{
+        display: none;
+}
+
+.title.result{
+        
+        margin-bottom: 0;
+}
+
+.loader{
+        height: 290px;
+        font-family: "Cat Icons";
+        font-size: 42px;
+        text-align: center;
+        
+}
+
+.loader .loadChar{
+        display: inline-block;
+        margin: 0 10px;
+        
+}
+.loadChar.a1{
+        animation: floating 2s .1s infinite ease-in-out,fadeIn 3s ease-in forwards ;
+        
+}
+.loadChar.a2{
+        animation: floating 2s .3s infinite ease-in-out, fadeIn 3s ease-in forwards 
+}.loadChar.a3{
+        animation: floating 2s .5s infinite ease-in-out, fadeIn 3s ease-in forwards   ;
+        
+}
+
+
+.loader .loadText{
+        margin-top: 35px;
+        font-family: "OrientalCatsLight";
+        letter-spacing: 4px;
+        font-size: 60px;
+        animation: floating 2s infinite ease-in-out,fadeIn 1s ease-in forwards 
+}
+
+
+
+@keyframes floating{
+        
+        0%{
+                transform: translateY(15px);
+        }
+        50%{
+                transform: translateY(-15px);
+        }
+        100%{
+                transform: translateY(15px);
+        }
+}
+
+
+@keyframes slideInPage {
+        0%{
+          left:0%;
+
+            position: absolute;
+            
+        }
+        
+        99.999%{
+            position: absolute;
+            left: 19%;
+        }
+        100%{
+          position: absolute;
+          left: 19%;
+        }
+        
+      }
+      
+      @keyframes slideOutPage {
+        0%{
+          position: absolute;
+          left: 19%;
+        }
+        99.9%{
+            position: absolute;
+            left:0%;
+            
+            
+        }
+        100%{
+                position: absolute;
+                left: 0;
+        }
+      }
+
+@media (max-width:800px) {
+        .home{
+                display: none;
+        }
+        .page{
+                margin-top: 40px;
+                position: static;
+        }
+        .title{
+                gap:0px;
+                margin:0;
+                
+        }
+        .cat{
+                height: 90px;
+                order:1
+        }
+
+        .title h1{
+                font-size: 50px;
+                text-align: center;
+        }
+        .bottom{
+                width: 100%;
+        }
+}
+@media(max-width:1250px){
+        .page{
+                padding-left: 4% ;
+                
+        }
+        .page.display{
+                animation: slideInPage 1s ease-in;
+        }
+        
+        .page.no-display{
+                animation: slideOutPage 1s ease-in;
+                background: rgba(0,0,0,0);
+        }
+}

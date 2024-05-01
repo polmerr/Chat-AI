@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'OrientalCatsLight';
+  src: url('../src/assets/Fonts/OrientalCatsLight-2OzB8.otf');
+}
+@font-face {
+  font-family: 'Cattino';
+  src: url('../src/assets/Fonts/Cattino-OVEMo.otf');
+}
+
+@font-face{
+  font-family: 'Citcat';
+  src: url('../src/assets/Fonts/CalliCatRegular-RpoRM.ttf')
+}
+
+@font-face{
+  font-family: 'Cat cafe';
+  src: url('../src/assets/Fonts/Catcafe-v5yM.ttf')
+}
+
+@font-face{
+  font-family: "Cat Icons";
+  src: url('../src//assets//Fonts//MeowsNepilIllustratioRegular-owjVq.ttf')
+}
+@font-face{
+  font-family: "Luna";
+  src: url('../src/assets/Fonts/LunasHandwriting-4G8B.ttf');
+}
+@font-face{
+  font-family: "Cute";
+  src: url('../src/assets/Fonts/MinouDemoRegular-JlOm.otf');
+}
+
+
+
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+  
+  
+}
+
+#root{
+  
+  font-family: 'Citcat';
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+

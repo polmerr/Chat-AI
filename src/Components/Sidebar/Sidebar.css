@@ -1,0 +1,252 @@
+.sidebar{
+    background-color: #f3f4f9;
+    min-height: 100vh;
+    box-shadow: 3px 0px 8px 0px rgba(0,0,0,0.2);
+    display: inline-flex;
+    flex-direction: column;
+    gap:30px;
+    max-width: 251px;
+    
+      
+}
+
+@keyframes slideIn {
+    0%{
+      left:-13%;
+        background-color: #ffffff;
+        position: absolute;
+        box-shadow: none;
+    }
+    
+    99.999%{
+        position: absolute;
+        left: 0;
+        background-color: #f3f4f9;
+        box-shadow: 3px 0px 8px 0px rgba(0,0,0,0.2);
+    }
+    100%{
+      position: static;
+    }
+    
+  }
+  
+  @keyframes slideOut {
+    0%{
+      position: absolute;
+      left: 0;
+    }
+    100%{
+        position: absolute;
+        left:-13%;
+        background-color: #ffffff;
+        box-shadow: none;
+        
+    }
+  }
+  
+  @keyframes fadeOut{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+  }
+
+
+.sidebar.display{
+    animation: slideIn 1s ease-out forwards;
+    
+}
+
+.sidebar.no-display{
+    animation: slideOut 1s ease-out forwards;
+    
+    
+}
+
+.middle.no-display{
+    animation: fadeOut 1s ease-out forwards ;
+    
+    
+}
+.middle.display{
+    animation: fadeIn 1s ease-out forwards;
+}
+
+
+.menu{
+    
+    cursor: pointer;
+    float: right    ;
+    z-index: 11;
+}
+
+.sidebar .menu{
+    height: 25px;
+}
+
+.middle >*, .top>* {
+    padding:15px
+}
+.middle hr{
+    padding: 0px;
+}
+
+.sidebar .middle{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.middle .recents-title{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    margin-top: -20px;
+    letter-spacing: 2px;
+
+}
+
+.recent-item, .archive-item{
+    display: flex;
+    
+    font-family: "Cute";
+    font-size: 16px;
+    align-items: center;
+    margin:15px 0px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding:12px;
+    font-weight: 100;
+    color: #636469;
+    animation: fadeIn .1s forwards;
+}
+
+.erase:hover{
+    color:rgba(255,100,100)
+}
+
+.recent-item:hover, .archive-item:hover{
+    background-color: #e3e4e9;
+    cursor: pointer;
+}
+
+.recent-item p{
+    flex: 1;
+}
+
+.recents{
+    margin-bottom: 10px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.recents::-webkit-scrollbar{
+    display: none;
+}
+
+.trash, .archive-title{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.trash{
+    animation: fadeIn .2s forwards;
+    font-weight: 900;
+    justify-content: start;
+    font-family: 'Cattino';
+    
+}
+.trash .icon, .book{
+    cursor: pointer;
+}
+
+.archive{
+    animation: fadeIn 1s forwards;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+.archive.none{
+    display: none;
+    
+}
+.archive::-webkit-scrollbar{
+    display: none;
+}
+
+.archive-title, .recents-title{
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Cattino';
+}
+
+@media(max-width:1100px){
+    .sidebar{
+        display: none;
+    }
+}
+
+@media(max-width:1250px){
+
+    @keyframes slideIn2 {
+        0%{
+          left:-16%;
+            background-color: #ffffff;
+            position: absolute;
+            box-shadow: none;
+        }
+        
+        99.999%{
+            position: absolute;
+            left: 0;
+            background-color: #f3f4f9;
+            box-shadow: 3px 0px 8px 0px rgba(0,0,0,0.2);
+        }
+        100%{
+          position: static;
+        }
+        
+      }
+      
+      @keyframes slideOut2 {
+        0%{
+          position: absolute;
+          left: 0;
+        }
+        100%{
+            position: absolute;
+            left:-16%;
+            background-color: #ffffff;
+            box-shadow: none;
+            
+        }
+      }
+
+      .sidebar.display{
+        animation: slideIn2 1s ease-out forwards;
+        
+    }
+    
+    .sidebar.no-display{
+        animation: slideOut2 1s ease-out forwards;
+        
+        
+    }
+    
+
+}
+
+    
